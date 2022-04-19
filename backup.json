@@ -1,0 +1,37 @@
+{
+	"Tags Technological" : ["Computing", "Phone", "Appliance", "Accesories"],
+	"Technologies" : [
+		{
+			"id" : 1,
+			"name" : "Benq HD",
+			"trademark" : "Benq",
+			"price" : 50,
+			"type" : "Monitor",
+			"tag" : "Computing"
+		},
+		{
+			"id" : 2,
+			"name" : "Canaima EF40MG",
+			"trademark" : "Industrias Canaima",
+			"price" : 60,
+			"type" : "Laptop",
+			"tag" : "Computing"
+		},
+		{
+			"id" : 3,
+			"name" : "Verizon",
+			"trademark" : "Alcatel",
+			"price" : 65,
+			"type" : "CellPhone",
+			"tag" : "Phone"
+		},
+		{
+			"id" : 4,
+			"name" : "TechMouse",
+			"trademark" : "IMEXX",
+			"price" : 5,
+			"type" : "Mouse",
+			"tag" : "Computing"
+		}
+	]
+}

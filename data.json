@@ -1,0 +1,77 @@
+{
+    "Tags Technological": [
+        "Computing",
+        "Phone",
+        "Appliance",
+        "Accesories"
+    ],
+    "Technologies": [
+        {
+            "id": 1,
+            "name": "Benq HD",
+            "trademark": "Benq",
+            "price": 50,
+            "type": "Monitor",
+            "tag": "Computing"
+        },
+        {
+            "id": 2,
+            "name": "Canaima EF40MG",
+            "trademark": "Industrias Canaima",
+            "price": 60,
+            "type": "Laptop",
+            "tag": "Computing"
+        },
+        {
+            "id": 3,
+            "name": "Verizon",
+            "trademark": "Alcatel",
+            "price": 65,
+            "type": "CellPhone",
+            "tag": "Phone"
+        },
+        {
+            "id": 4,
+            "name": "TechMouse",
+            "trademark": "IMEXX",
+            "price": 5,
+            "type": "Mouse",
+            "tag": "Computing"
+        },
+        {
+            "name": "FANCOOLER BRUSHLESS",
+            "price": 5,
+            "tag": "Appliance",
+            "trademark": "Brushless",
+            "type": "Fan"
+        },
+        {
+            "name": "Xiaomi A9",
+            "price": 150,
+            "tag": "Phone",
+            "trademark": "Xiaomi",
+            "type": "Cellphone"
+        },
+        {
+            "name": "Shark V8",
+            "price": 130,
+            "tag": "Phone",
+            "trademark": "Shark",
+            "type": "CellPhone"
+        },
+        {
+            "name": "PotSocket",
+            "price": 5,
+            "tag": "Phone",
+            "trademark": "Anonymous",
+            "type": "Accesories"
+        },
+        {
+            "name": "Protect Glass X",
+            "price": 10,
+            "tag": "Phone",
+            "trademark": "Gorila Glass",
+            "type": "Accesories"
+        }
+    ]
+}
