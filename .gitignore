@@ -1,5 +1,6 @@
 #Enviroments
 .venv
+.env
 env/
 venv/
 
