@@ -1,0 +1,9 @@
+#Enviroments
+.venv
+env/
+venv/
+
+#Byte-compiled
+__pycache__/
+__pycache__/*
+

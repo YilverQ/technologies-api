@@ -1,0 +1,33 @@
+#Este archivo contiene las actualizaciones más recientes de la aplicación. 
+
+"""
+	Estructura de las actualizaciones:
+__Fecha__
+__Versión__
+__Información__
+__TrabajoFuturo__
+"""
+
+#__ $$ __#
+Fecha: 20 de Dicciembre Del 2021
+Versión: 0.1.0
+¿¿__Información__??
+	Se crearon los archivos principales. 
+	Se agregó una base de datos en JSON. 
+	Archivo "model.py" encargado de gestionar la data de la aplicación. 
+	Se subió el proyecto a github. 
+
+
+#__ $$ __#
+Fecha: 16 de Agosto Del 2022
+Versión: 0.1.1
+¿¿__Información__??
+	Se agregarán archivos de configuración necesarios (venv, .env, git). 
+	
+
+
+__TrabajoFuturo__
+	Agregar un boton para regresar.
+	Hacer un menú antes de ejecutar la aplicación
+	Cambiar color en el navegador. 
+	Agregar botón para modo oscuro y claro.
