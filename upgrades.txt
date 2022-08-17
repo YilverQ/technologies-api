@@ -23,8 +23,9 @@ Fecha: 16 de Agosto Del 2022
 Versión: 0.1.1
 ¿¿__Información__??
 	Se agregarán archivos de configuración necesarios (venv, .env, git). 
-	
-
+	Se creó base de datos (MySQL // MariaDB).
+	Se agregó un model. 
+	Se está trabajando con variables de entorno. (.env)
 
 __TrabajoFuturo__
 	Agregar un boton para regresar.
