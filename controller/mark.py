@@ -10,7 +10,7 @@ class Mark():
 	#Create a new mark.
 	def create(self, data):
 		mark = self.mark
-		exist = mark.read_only(data["name"])
+		exist = mark.read_by_name(data["name"])
 		if exist: 
 			return f"Sorry, mark with the name {data['name']} already registered."
 		else:
@@ -24,15 +24,21 @@ class Mark():
 
 
 	#Read only mark.
-	def read_only(self, name):
+	def read_only(self, id_mark):
 		mark = self.mark
-		return mark.read_only(name)
+		return mark.read_only(id_mark)
+
+
+	#Read only mark by name.
+	def read_by_name(self, name):
+		mark = self.mark
+		return mark.read_by_name(name)
 
 
 	#Update mark.
 	def update(self, id_mark, data):
 		mark = self.mark
-		exist = mark.read_only(data["name"])
+		exist = mark.read_by_name(data["name"])
 		if exist:
 			if exist["id"] == id_mark:
 				return mark.update(id_mark, data)

@@ -3,6 +3,7 @@ def data_request(jsonData):
 	new_product = {
 		"name" : jsonData["name"],
 		"price": jsonData["price"],
-		"id_mark" : jsonData["id_mark"]
+		"id_mark" : jsonData["id_mark"],
+		"id_category" : jsonData["id_category"]
 	}
 	return new_product

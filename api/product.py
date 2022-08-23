@@ -35,20 +35,19 @@ def read():
 
 
 #Get only product.
-@productAPI.route("/product/<string:name>", methods = ["GET"])
-def read_only(name):
-	name = name.replace("-", " ")
-	message = {"Message" : f"Details data from id_product {name}"}
-	message["Product:"] = product.read_only(name)
+@productAPI.route("/product/<int:id_product>", methods = ["GET"])
+def read_only(id_product):
+	message = {"Message" : f"Details data from id_product {id_product}"}
+	message["Product:"] = product.read_only(id_product)
 	return jsonify(message)
 
 
 #Update product.
 @productAPI.route("/product/<int:id_product>", methods = ["PUT"])
 def update(id_product):
-	new_mark = data_request(request.json) #Request data.
+	new_product = data_request(request.json) #Request data.
 	message = {"Message" : f"Updating data from id_product {id_product}..."}
-	message["New Data:"] = product.update(id_product, new_mark)
+	message["New Data:"] = product.update(id_product, new_product)
 	return jsonify(message)
 
 

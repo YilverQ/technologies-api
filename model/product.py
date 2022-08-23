@@ -9,8 +9,8 @@ class ProductDB(DAO):
 		"""
 			data = {"name" : "", "price" : "", "id_mark" = ""}
 		"""
-		insert = "Insert INTO Product (name, price, id_mark)"
-		values = f"""VALUES ('{data["name"]}', '{data["price"]}', '{data["id_mark"]}');"""
+		insert = "Insert INTO Product (name, price, id_mark, id_category)"
+		values = f"""VALUES ('{data["name"]}', '{data["price"]}', '{data["id_mark"]}', '{data["id_category"]}');"""
 		sentence = insert + " " + values #Sentence SQL to execute.
 		self.cursor.execute(sentence)
 		self.connection.commit()
@@ -24,7 +24,14 @@ class ProductDB(DAO):
 
 
 	#read_only.
-	def read_only(self, name):
+	def read_only(self, id_product):
+		sentence = f"""Select * FROM Product WHERE id = '{id_product}';"""
+		self.cursor.execute(sentence)
+		return self.cursor.fetchone()
+
+
+	#read_by_name.
+	def read_by_name(self, name):
 		sentence = f"""Select * FROM Product WHERE name = '{name}';"""
 		self.cursor.execute(sentence)
 		return self.cursor.fetchone()
@@ -35,7 +42,7 @@ class ProductDB(DAO):
 		"""
 			data = {"name" : "", "price" : "", "id_mark" = ""}
 		"""
-		dataUpdate = f"""name = '{data["name"]}', price = '{data["price"]}', id_mark = '{data["id_mark"]}'"""
+		dataUpdate = f"""name = '{data["name"]}', price = '{data["price"]}', id_mark = '{data["id_mark"]}', id_category = '{data["id_category"]}'"""
 		sentence = f"""Update Product SET {dataUpdate} WHERE id = {id_product};"""
 		self.cursor.execute(sentence) #Update all the row.
 		self.connection.commit()

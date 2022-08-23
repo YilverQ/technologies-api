@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Metas-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Title-->
+	<title>{{ data["title"].title() }} - Technologies</title>
+
+	<!--Estilos Importados-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/normalize.css') }}">
+
+	<!--Estilos Mios-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+	{% block styles %}	
+	{% endblock %}
+	
+	<!--Favicon-->
+	<link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+</head>
+<body>
+	<!--Menú de navegación-->
+	<nav class="nav">
+		<a href="/"><h1 class="nav__title">Technolgies</h1></a>
+		<ul class="nav__menu">
+			<a href="/product"><li class="nav__item">Products</li></a>
+			<a href="/mark"><li class="nav__item">Marks</li></a>
+			<a href="category"><li class="nav__item">Categories</li></a>
+		</ul>
+	</nav>
+
+	<div class="message disabled" id="message">
+		<p class="message__text" id="message__text">Lorem Ipsu text Message</p>
+		<span class="message__close" id="message__close">X</span>
+	</div>
+
+	{% block header %}
+	{% endblock %}
+
+	{% block content %}
+	{% endblock %}
+
+	<!--Menú de navegación-->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/message.js') }}"></script>
+	<script type="module" src="{{ url_for('static', filename='js/renderHTML.js') }}"></script>
+	{% block scripts %}
+	{% endblock %}
+</body>
+</html>

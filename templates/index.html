@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% from "_macro.html" import tag_header %}
+{% from "_macro.html" import product_header %}
+{% from "_macro.html" import article_tag %}
+{% from "_macro.html" import article_product %}
+{% from "_macro.html" import js_category %}
+{% from "_macro.html" import js_mark %}
+{% from "_macro.html" import js_product %}
+
+	{% block header %}
+	<header class="header">
+		{% if(data["title"] == "product") %}
+		{{ product_header(data["title"]) }}
+		{% endif %}
+		{% if(data["title"] != "product") %}
+		{{ tag_header(data["title"]) }}
+		{% endif %}
+		<div class="header__block">
+			<img class="header__imagen" src="/static/img/add.svg">
+		</div>
+	</header>
+	{% endblock %}
+
+	{% block content %}
+	<article class="content">
+		<h3 class="content__title">List of {{ data["title"] }}</h3>
+		{% if(data["title"] == "product") %}
+		{{ article_product() }}
+		{% endif %}
+		{% if(data["title"] != "product") %}
+		{{ article_tag() }}
+		{% endif %}
+	</article>
+	{% endblock %}
+
+	{% block scripts %}
+		{% if(data["title"] == "product") %}
+		{{ js_product() }}
+		{% endif %}
+		
+		{% if(data["title"] == "category") %}
+		{{ js_category() }}
+		{% endif %}
+
+		{% if(data["title"] == "mark") %}
+		{{ js_mark() }}
+		{% endif %}
+	{% endblock %}

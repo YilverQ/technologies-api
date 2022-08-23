@@ -28,7 +28,5 @@ Versión: 0.1.1
 	Se está trabajando con variables de entorno. (.env)
 
 __TrabajoFuturo__
-	Agregar un boton para regresar.
-	Hacer un menú antes de ejecutar la aplicación
-	Cambiar color en el navegador. 
-	Agregar botón para modo oscuro y claro.
+	Integrar un ORM.
+	Hacer la aplicación con JS

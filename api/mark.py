@@ -35,11 +35,10 @@ def read():
 
 
 #Get only mark.
-@markAPI.route("/mark/<string:name>", methods = ["GET"])
-def read_only(name):
-	name = name.replace("-", " ")
-	message = {"Message" : f"Details data from {name}"}
-	message["Mark:"] = mark.read_only(name)
+@markAPI.route("/mark/<int:id_mark>", methods = ["GET"])
+def read_only(id_mark):
+	message = {"Message" : f"Details data from id_mark {id_mark}"}
+	message["Mark:"] = mark.read_only(id_mark)
 	return jsonify(message)
 
 
@@ -47,7 +46,7 @@ def read_only(name):
 @markAPI.route("/mark/<int:id_mark>", methods = ["PUT"])
 def update(id_mark):
 	new_mark = data_request(request.json) #Request data.
-	message = {"Message" : f"Updating data from mark_id {id_mark}..."}
+	message = {"Message" : f"Updating data from id_mark {id_mark}..."}
 	message["New Data:"] = mark.update(id_mark, new_mark)
 	return jsonify(message)
 

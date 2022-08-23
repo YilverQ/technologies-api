@@ -1,0 +1,91 @@
+{% macro product_header(title) %}
+      <div class="header__block">
+        <form class="form" id="productForm">
+          <h3 class="form__title">Add new {{ title }}</h3>
+          <div class="form__block">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__input" type="text" name="name" placeholder="Xiaomi M10" required>
+          </div>
+          <div class="form__block">
+            <label class="form__label" for="price">Price</label>
+            <input class="form__input" type="text" name="price" placeholder="250" required>
+          </div>
+          <div class="form__block">
+            <label class="form__label" for="category">Category</label>
+            <select class="form__select" name="category" required>
+              <option value="" disabled selected>Add Category</option>
+              <option value="phone">phone</option>
+            </select>
+          </div>
+          <div class="form__block">
+            <label class="form__label" for="mark">Mark</label>
+            <select class="form__select" name="mark" required>
+              <option value="" disabled selected>Add Mark</option>
+              <option value="xiaomi">Xiaomi</option>
+            </select>
+          </div>
+            <button class="form__botton" type="submit">Submit</button>
+        </form>
+      </div>
+{% endmacro %}
+
+{% macro tag_header(title) %}
+      <div class="header__block">
+        <form class="form" id="{{ title }}Form">
+          <h3 class="form__title">Add new {{ title }}</h3>
+          <div class="form__block">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__input" type="text" name="name" placeholder="Xiaomi M10" required>
+          </div>
+            <button class="form__botton" type="submit">Submit</button>
+        </form>
+      </div>
+{% endmacro %}
+
+
+{% macro article_product() %}
+    <table class="table" cellspacing="0">
+      <thead class="table__thead">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+          <th scope="col">Mark</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="table__body">
+          <!--JS Escribe el código-->
+      </tbody>
+    </table>
+{% endmacro %}
+
+
+{% macro article_tag() %}
+    <table class="table" cellspacing="0">
+      <thead class="table__thead">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="table__body">
+          <!--JS Escribe el código-->
+      </tbody>
+    </table>
+{% endmacro %}
+
+
+{% macro js_category(title) %}
+  <script type="module" src="{{ url_for('static', filename='js/category.js') }}"></script>
+{% endmacro %}
+
+{% macro js_mark(title) %}
+  <script type="module" src="{{ url_for('static', filename='js/mark.js') }}"></script>
+{% endmacro %}
+
+{% macro js_product(title) %}
+  <script type="module" src="{{ url_for('static', filename='js/product.js') }}"></script>
+{% endmacro %}

@@ -1,0 +1,52 @@
+/*Estilos para todos los elementos*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{text-decoration: none;}
+li{list-style: none;}
+/*Fin de los estilos que aplican para todos los elementos*/
+
+
+/*Importamos las fuentes que usará nuestra página*/
+@font-face{
+    font-family: fuente1;
+    src: url(../fonts/Roboto-Regular.ttf); 
+}
+@font-face{
+    font-family: fuente2;
+    src: url(../fonts/OpenSans-Regular.ttf); 
+}
+/*Fin de la Fuentes*/
+
+
+/*Custom Propities*/
+:root{
+  /*Colores de Google*/
+  --color-nav: #392e6d ;
+  --color-primary: #372f70;
+  --color-primary2: #30367d;
+  --color-secondary: #b99c86;
+  --color-info: #d9edf7;
+  --color-light: #ffffff;
+  --color-danger:#d93e4c;
+  --color-success:#28a745;
+}
+/*FIN de las Customs Propities*/
+
+
+/*Estilos para los elementos principales*/
+html {
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, th{
+  font-family: fuente1;
+  font-display: fallback;
+}
+p, li, a, input, select, button, label,td{
+  font-family: fuente2;
+  font-display: fallback;
+  color:#2d3436;
+}
+/*Fin de los estilos principales*/

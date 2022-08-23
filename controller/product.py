@@ -10,7 +10,7 @@ class Product():
 	#Create a new product.
 	def create(self, data):
 		product = self.product
-		exist = product.read_only(data["name"])
+		exist = product.read_by_name(data["name"])
 		if exist: 
 			return f"Sorry, product with the name {data['name']} already registered."
 		else:
@@ -24,15 +24,21 @@ class Product():
 
 
 	#Read only product.
-	def read_only(self, name):
+	def read_only(self, id_product):
 		product = self.product
-		return product.read_only(name)
+		return product.read_only(id_product)
+
+
+	#Read only product by name.
+	def read_by_name(self, name):
+		product = self.product
+		return product.read_by_name(name)
 
 
 	#Update product.
 	def update(self, id_product, data):
 		product = self.product
-		exist = product.read_only(data["name"])
+		exist = product.read_by_name(data["name"])
 		if exist:
 			if exist["id"] == id_product:
 				return product.update(id_product, data)
